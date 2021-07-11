@@ -2,6 +2,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Image from "next/image"
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Route path="/">
           <div className="App">
             <header className="App-header">
-              <img src={logo} className="App-logo" alt="logo" />
+              <Image src={logo} className="App-logo" alt="logo" />
               <p>
                 Edit <code>src/App.tsx</code> and save to reload.
               </p>
