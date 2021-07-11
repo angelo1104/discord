@@ -20,8 +20,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "next dev",
-    "start-production": "next start",
+    "dev": "next dev",
+    "start": "next start",
     "build": "next build",
     "test": "jest test"
   },
