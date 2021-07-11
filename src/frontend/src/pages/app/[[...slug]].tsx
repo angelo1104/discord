@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic'
 // try changing "ssr" to true below to test for incompatibilities, if
 // no errors occur the above static import can be used instead and the
 // below removed
-const NextIndexWrapper = dynamic(() => import('..'), { ssr: false })
+const NextIndexWrapper = dynamic(() => import('../..'), { ssr: false })
 
 export default function Page(props: any) {
   return <NextIndexWrapper {...props} />
