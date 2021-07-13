@@ -1,16 +1,15 @@
-import '../index.css'
-import Head from 'next/head'
-import type {AppProps} from "next/app";
+import "../index.css";
+import Head from "next/head";
+import type { AppProps } from "next/app";
+import { ThemeProvider } from "styled-components";
+import theme from "../theme";
 
-export default function MyApp({ Component, pageProps}: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Head>
-        <title>React App</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
-  )
+  );
 }
