@@ -1,11 +1,14 @@
 import React from "react";
 import Header from "./Header";
+import { HomeContainer, HomePrimary } from "./Home.style";
 
 function Home() {
   return (
-    <div>
-      <Header />
-    </div>
+    <HomeContainer>
+      <HomePrimary>
+        <Header />
+      </HomePrimary>
+    </HomeContainer>
   );
 }
 
