@@ -126,3 +126,18 @@ export const InformationContent = styled.p`
   line-height: 1.7;
   margin-bottom: 0;
 `;
+
+export const HomeInformationSecond = styled.section`
+  display: flex;
+  background: ${theme.colors.offWhite};
+  min-height: 95vh;
+  align-items: center;
+  padding: 20px 50px;
+`;
+
+export const HomeInformationSecondText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: -30px 100px 0 50px;
+  max-width: 400px;
+`;

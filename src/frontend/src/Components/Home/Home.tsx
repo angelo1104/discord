@@ -16,6 +16,8 @@ import {
   InformationText,
   InformationTitle,
   InformationContent,
+  HomeInformationSecond,
+  HomeInformationSecondText,
 } from "./Home.style";
 import Button from "../Utils/Button/Button";
 import { GetAppOutlined } from "@material-ui/icons";
@@ -24,6 +26,7 @@ import Background from "../../Assets/Images/BackgroundHome.svg";
 import ForeHome from "../../Assets/Images/ForeHome.svg";
 import BackHome from "../../Assets/Images/BackHome.svg";
 import InformationFirstMain from "../../Assets/Images/HomeInformationFirst.svg";
+import InformationSecondMain from "../../Assets/Images/HomeInformationSecond.svg";
 
 function Home() {
   return (
@@ -69,6 +72,17 @@ function Home() {
           </InformationContent>
         </InformationText>
       </InformationFirst>
+      <HomeInformationSecond>
+        <HomeInformationSecondText>
+          <InformationTitle>Where hanging out is easy</InformationTitle>
+          <InformationContent>
+            Grab a seat in a voice channel when you’re free. Friends in your
+            server can see you’re around and instantly pop in to talk without
+            having to call.
+          </InformationContent>
+        </HomeInformationSecondText>
+        <img src={InformationSecondMain} alt="" />
+      </HomeInformationSecond>
     </HomeContainer>
   );
 }
