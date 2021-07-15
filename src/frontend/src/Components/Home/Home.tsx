@@ -27,6 +27,7 @@ import ForeHome from "../../Assets/Images/ForeHome.svg";
 import BackHome from "../../Assets/Images/BackHome.svg";
 import InformationFirstMain from "../../Assets/Images/HomeInformationFirst.svg";
 import InformationSecondMain from "../../Assets/Images/HomeInformationSecond.svg";
+import InformationThirdMain from "../../Assets/Images/HomeInformationThird.svg";
 
 function Home() {
   return (
@@ -83,6 +84,17 @@ function Home() {
         </HomeInformationSecondText>
         <img src={InformationSecondMain} alt="" />
       </HomeInformationSecond>
+      <InformationFirst>
+        <img src={InformationThirdMain} alt={""} />
+        <InformationText>
+          <InformationTitle>From few to a fandom</InformationTitle>
+          <InformationContent>
+            Get any community running with moderation tools and custom member
+            access. Give members special powers, set up private channels, and
+            more.
+          </InformationContent>
+        </InformationText>
+      </InformationFirst>
     </HomeContainer>
   );
 }
