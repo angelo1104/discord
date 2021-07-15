@@ -141,3 +141,61 @@ export const HomeInformationSecondText = styled.div`
   margin: -30px 100px 0 50px;
   max-width: 400px;
 `;
+
+export const ReliableTech = styled.section`
+  display: flex;
+  flex-direction: column;
+  background: ${theme.colors.offWhite};
+  align-items: center;
+  padding: 30px;
+
+  img {
+    width: 90%;
+  }
+`;
+
+export const ReliableTitle = styled.h2`
+  font-family: ${theme.fonts.title};
+  color: ${theme.colors.notQuiteBlack};
+  font-weight: 900;
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  max-width: 70%;
+  text-align: center;
+`;
+
+export const ReliableSubtitle = styled.h4`
+  font-family: ${theme.fonts.display};
+  color: ${theme.colors.notQuiteBlack};
+  font-weight: 400;
+  font-size: 1.22rem;
+  line-height: 1.7;
+  max-width: 70%;
+  text-align: center;
+`;
+
+export const ReliableEnd = styled.h4`
+  font-family: ${theme.fonts.subtitle};
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin-top: 100px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .text {
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+
+  img {
+    margin-bottom: -20px;
+    width: 600px;
+  }
+
+  .button-text {
+    margin-top: -3px;
+    margin-left: 10px;
+  }
+`;

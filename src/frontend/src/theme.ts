@@ -5,6 +5,7 @@ const theme = {
     greyple: "#99aab5",
     darkNotBlack: "#2c2f33",
     hoverBlack: "#36393f",
+    hoverBrand: "hsl(226,calc(var(--saturation-factor, 1)*58%),72%)",
     focusBorder: "#00b0f4",
     statusGreen: "#43b581",
     textLink: "#00b0f4",

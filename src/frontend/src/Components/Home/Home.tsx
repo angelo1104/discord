@@ -18,6 +18,10 @@ import {
   InformationContent,
   HomeInformationSecond,
   HomeInformationSecondText,
+  ReliableTech,
+  ReliableTitle,
+  ReliableSubtitle,
+  ReliableEnd,
 } from "./Home.style";
 import Button from "../Utils/Button/Button";
 import { GetAppOutlined } from "@material-ui/icons";
@@ -28,6 +32,8 @@ import BackHome from "../../Assets/Images/BackHome.svg";
 import InformationFirstMain from "../../Assets/Images/HomeInformationFirst.svg";
 import InformationSecondMain from "../../Assets/Images/HomeInformationSecond.svg";
 import InformationThirdMain from "../../Assets/Images/HomeInformationThird.svg";
+import ReliableTechMain from "../../Assets/Images/HomeREliableTech.svg";
+import Stars from "../../Assets/Images/stars.svg";
 
 function Home() {
   return (
@@ -48,7 +54,7 @@ function Home() {
                 <GetAppOutlined />
                 <span className={"text"}>Download for {getOS()}</span>
               </Button>
-              <Button large dark>
+              <Button large buttonType={"dark"}>
                 Open discord in your browser
               </Button>
             </HomePrimaryButtons>
@@ -95,6 +101,25 @@ function Home() {
           </InformationContent>
         </InformationText>
       </InformationFirst>
+      <ReliableTech>
+        <ReliableTitle>RELIABLE TECH FOR STAYING CLOSE</ReliableTitle>
+        <ReliableSubtitle>
+          Low-latency voice and video feels like you’re in the same room. Wave
+          hello over video, watch friends stream their games, or gather up and
+          have a drawing session with screen share.
+        </ReliableSubtitle>
+        <img src={ReliableTechMain} alt="" />
+
+        <ReliableEnd>
+          <img src={Stars} alt="" />
+          <span className={"text"}>Ready to start your journey?</span>
+
+          <Button large buttonType={"primary"}>
+            <GetAppOutlined />
+            <span className={"button-text"}>Download for {getOS()}</span>
+          </Button>
+        </ReliableEnd>
+      </ReliableTech>
     </HomeContainer>
   );
 }
