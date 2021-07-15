@@ -19,6 +19,7 @@ const theme = {
     title: "'Antique olive', sans-serif",
     body: "'Open Sans', sans-serif",
     subtitle: "'Inter', sans-serif",
+    display: "'Montserrat', sans-serif",
   },
 };
 

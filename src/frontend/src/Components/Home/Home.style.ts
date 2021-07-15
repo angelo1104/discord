@@ -93,3 +93,36 @@ export const BackHomeImage = styled.img`
   bottom: 0;
   right: -20%;
 `;
+
+export const InformationFirst = styled.section`
+  display: flex;
+  background: ${theme.colors.white};
+  min-height: 95vh;
+  align-items: center;
+  padding: 20px 50px;
+`;
+
+export const InformationText = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: -30px 0 0 150px;
+  max-width: 330px;
+`;
+
+export const InformationTitle = styled.h4`
+  font-size: 3rem;
+  color: ${theme.colors.darkNotBlack};
+  font-weight: 800;
+  line-height: 1.25;
+  font-family: ${theme.fonts.subtitle};
+  white-space: break-spaces;
+  margin-bottom: 20px;
+`;
+
+export const InformationContent = styled.p`
+  font-size: 19px;
+  font-family: ${theme.fonts.display};
+  color: ${theme.colors.notQuiteBlack};
+  line-height: 1.7;
+  margin-bottom: 0;
+`;

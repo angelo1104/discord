@@ -12,6 +12,10 @@ import {
   ForeHomeImage,
   BackHomeImage,
   HomePrimaryText,
+  InformationFirst,
+  InformationText,
+  InformationTitle,
+  InformationContent,
 } from "./Home.style";
 import Button from "../Utils/Button/Button";
 import { GetAppOutlined } from "@material-ui/icons";
@@ -19,6 +23,7 @@ import getOS from "../../Utils/getOS";
 import Background from "../../Assets/Images/BackgroundHome.svg";
 import ForeHome from "../../Assets/Images/ForeHome.svg";
 import BackHome from "../../Assets/Images/BackHome.svg";
+import InformationFirstMain from "../../Assets/Images/HomeInformationFirst.svg";
 
 function Home() {
   return (
@@ -51,6 +56,19 @@ function Home() {
           <BackHomeImage src={BackHome} alt={""} />
         </ImageContainer>
       </HomePrimary>
+      <InformationFirst>
+        <img src={InformationFirstMain} alt={""} />
+        <InformationText>
+          <InformationTitle>
+            Create an invite-only place where you belong
+          </InformationTitle>
+          <InformationContent>
+            Discord servers are organized into topic-based channels where you
+            can collaborate, share, and just talk about your day without
+            clogging up a group chat.
+          </InformationContent>
+        </InformationText>
+      </InformationFirst>
     </HomeContainer>
   );
 }
