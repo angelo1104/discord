@@ -34,6 +34,7 @@ import InformationSecondMain from "../../Assets/Images/HomeInformationSecond.svg
 import InformationThirdMain from "../../Assets/Images/HomeInformationThird.svg";
 import ReliableTechMain from "../../Assets/Images/HomeREliableTech.svg";
 import Stars from "../../Assets/Images/stars.svg";
+import Footer from "../Utils/Footer/Footer";
 
 function Home() {
   return (
@@ -120,6 +121,8 @@ function Home() {
           </Button>
         </ReliableEnd>
       </ReliableTech>
+
+      <Footer />
     </HomeContainer>
   );
 }
