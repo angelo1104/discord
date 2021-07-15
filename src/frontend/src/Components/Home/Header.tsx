@@ -31,7 +31,7 @@ function Header(): JSX.Element {
         <ContentLink>Safety</ContentLink>
         <ContentLink>Support</ContentLink>
       </LinksBox>
-      <Button />
+      <Button>Open discord</Button>
     </HeaderContainer>
   );
 }

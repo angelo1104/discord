@@ -4,6 +4,7 @@ const theme = {
     brandGradient: "linear-gradient(90deg,#8ea1e1,#7289da)",
     greyple: "#99aab5",
     darkNotBlack: "#2c2f33",
+    hoverBlack: "#36393f",
     focusBorder: "#00b0f4",
     statusGreen: "#43b581",
     textLink: "#00b0f4",
