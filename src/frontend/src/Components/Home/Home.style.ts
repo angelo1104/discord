@@ -8,6 +8,7 @@ export const HomePrimary = styled.section`
   background-color: ${theme.colors.brand};
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 `;
 
 export const HomePrimaryContent = styled.div`
@@ -60,7 +61,7 @@ export const HomePrimaryButtons = styled.div`
 `;
 
 export const HomePrimaryBg = styled.img`
-  top: -30%;
+  top: -40%;
 `;
 
 export const HomePrimaryText = styled.div`
