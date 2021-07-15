@@ -4,7 +4,7 @@ import theme from "../../theme";
 export const HomeContainer = styled.div``;
 
 export const HomePrimary = styled.section`
-  min-height: 95vh;
+  min-height: 97vh;
   background-color: ${theme.colors.brand};
   position: relative;
   overflow-x: hidden;
@@ -60,9 +60,7 @@ export const HomePrimaryButtons = styled.div`
 `;
 
 export const HomePrimaryBg = styled.img`
-  width: 100%;
-  max-width: 100%;
-  position: absolute;
+  top: -30%;
 `;
 
 export const HomePrimaryText = styled.div`
