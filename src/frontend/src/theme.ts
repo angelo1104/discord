@@ -16,7 +16,7 @@ const theme = {
     ekkoRed: "#de2761",
   },
   fonts: {
-    title: "'Montserrat', sans-serif",
+    title: "'Antique olive', sans-serif",
     body: "'Open Sans', sans-serif",
     subtitle: "'Inter', sans-serif",
   },

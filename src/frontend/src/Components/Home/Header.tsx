@@ -11,7 +11,7 @@ const HeaderContainer = styled.header`
   width: 85%;
   margin: auto;
   justify-content: space-between;
-  padding: 25px 20px;
+  padding: 15px 20px;
 `;
 
 const LinksBox = styled.div`
