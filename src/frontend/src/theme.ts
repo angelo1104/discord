@@ -15,6 +15,8 @@ const theme = {
     notQuiteBlackRgb: "35,39,42",
     black: "#000",
     ekkoRed: "#de2761",
+    darkGrey: "#72767d",
+    grey404: "#b9bbbe",
   },
   fonts: {
     title: "'Antique olive', sans-serif",
