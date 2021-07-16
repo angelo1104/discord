@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import theme from "../../theme";
+import Image from "next/image";
 
 export const Container = styled.div`
-  height: 100vh;
-  background: ${theme.colors.offWhite};
   overflow-y: hidden;
+  background: ${theme.colors.offWhite};
   display: flex;
 `;
 
@@ -180,11 +180,19 @@ export const Info = styled.p`
 
 export const Wrapper = styled.div`
   max-height: fit-content;
-  padding: 80px 50px;
+  padding: 80px 50px 0;
 `;
 
-export const HamsterImage = styled.img`
-  width: 900px;
-  margin: 30px 50px;
-  height: 540px;
+export const HamsterImage = styled(Image)`
+  padding: 30px 50px !important;
+`;
+
+export const MegaContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DiscordImage = styled.img`
+  height: 50px;
+  background: ${theme.colors.offWhite};
 `;
