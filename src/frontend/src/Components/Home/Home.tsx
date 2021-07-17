@@ -23,6 +23,7 @@ import {
   ReliableTitle,
   ReliableSubtitle,
   ReliableEnd,
+  ReliableTechMain,
 } from "./Home.style";
 import Button from "../Utils/Button/Button";
 import { GetAppOutlined } from "@material-ui/icons";
@@ -31,9 +32,9 @@ import Background from "../../Assets/Images/BackgroundHome.svg";
 import ForeHome from "../../Assets/Images/ForeHome.svg";
 import BackHome from "../../Assets/Images/BackHome.svg";
 import InformationFirstImage from "../../Assets/Images/HomeInformationFirst.svg";
-import InformationSecondMain from "../../Assets/Images/HomeInformationSecond.svg";
-import InformationThirdMain from "../../Assets/Images/HomeInformationThird.svg";
-import ReliableTechMain from "../../Assets/Images/HomeREliableTech.svg";
+import InformationSecondImage from "../../Assets/Images/HomeInformationSecond.svg";
+import InformationThirdImage from "../../Assets/Images/HomeInformationThird.svg";
+import ReliableTechImage from "../../Assets/Images/HomeREliableTech.svg";
 import Stars from "../../Assets/Images/stars.svg";
 import Footer from "../Utils/Footer/Footer";
 import FadeOnScroll from "../Utils/FadeOnScroll/FadeOnScroll";
@@ -87,35 +88,47 @@ function Home() {
         </FadeOnScroll>
       </InformationFirst>
       <HomeInformationSecond>
-        <HomeInformationSecondText>
-          <InformationTitle>Where hanging out is easy</InformationTitle>
-          <InformationContent>
-            Grab a seat in a voice channel when you’re free. Friends in your
-            server can see you’re around and instantly pop in to talk without
-            having to call.
-          </InformationContent>
-        </HomeInformationSecondText>
-        <img src={InformationSecondMain} alt="" />
+        <FadeOnScroll>
+          <InformationFirstMain>
+            <HomeInformationSecondText>
+              <InformationTitle>Where hanging out is easy</InformationTitle>
+              <InformationContent>
+                Grab a seat in a voice channel when you’re free. Friends in your
+                server can see you’re around and instantly pop in to talk
+                without having to call.
+              </InformationContent>
+            </HomeInformationSecondText>
+            <img src={InformationSecondImage} alt="" />
+          </InformationFirstMain>
+        </FadeOnScroll>
       </HomeInformationSecond>
       <InformationFirst>
-        <img src={InformationThirdMain} alt={""} />
-        <InformationText>
-          <InformationTitle>From few to a fandom</InformationTitle>
-          <InformationContent>
-            Get any community running with moderation tools and custom member
-            access. Give members special powers, set up private channels, and
-            more.
-          </InformationContent>
-        </InformationText>
+        <FadeOnScroll>
+          <InformationFirstMain>
+            <img src={InformationThirdImage} alt={""} />
+            <InformationText>
+              <InformationTitle>From few to a fandom</InformationTitle>
+              <InformationContent>
+                Get any community running with moderation tools and custom
+                member access. Give members special powers, set up private
+                channels, and more.
+              </InformationContent>
+            </InformationText>
+          </InformationFirstMain>
+        </FadeOnScroll>
       </InformationFirst>
       <ReliableTech>
-        <ReliableTitle>RELIABLE TECH FOR STAYING CLOSE</ReliableTitle>
-        <ReliableSubtitle>
-          Low-latency voice and video feels like you’re in the same room. Wave
-          hello over video, watch friends stream their games, or gather up and
-          have a drawing session with screen share.
-        </ReliableSubtitle>
-        <img src={ReliableTechMain} alt="" />
+        <FadeOnScroll>
+          <ReliableTechMain>
+            <ReliableTitle>RELIABLE TECH FOR STAYING CLOSE</ReliableTitle>
+            <ReliableSubtitle>
+              Low-latency voice and video feels like you’re in the same room.
+              Wave hello over video, watch friends stream their games, or gather
+              up and have a drawing session with screen share.
+            </ReliableSubtitle>
+            <img src={ReliableTechImage} alt="" />
+          </ReliableTechMain>
+        </FadeOnScroll>
 
         <ReliableEnd>
           <img src={Stars} alt="" />

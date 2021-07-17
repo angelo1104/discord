@@ -203,3 +203,9 @@ export const ReliableEnd = styled.h4`
     margin-left: 10px;
   }
 `;
+
+export const ReliableTechMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
