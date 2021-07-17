@@ -35,6 +35,7 @@ import InformationThirdMain from "../../Assets/Images/HomeInformationThird.svg";
 import ReliableTechMain from "../../Assets/Images/HomeREliableTech.svg";
 import Stars from "../../Assets/Images/stars.svg";
 import Footer from "../Utils/Footer/Footer";
+import FadeOnScroll from "../Utils/FadeOnScroll/FadeOnScroll";
 
 function Home() {
   return (
@@ -68,17 +69,19 @@ function Home() {
         </ImageContainer>
       </HomePrimary>
       <InformationFirst>
-        <img src={InformationFirstMain} alt={""} />
-        <InformationText>
-          <InformationTitle>
-            Create an invite-only place where you belong
-          </InformationTitle>
-          <InformationContent>
-            Discord servers are organized into topic-based channels where you
-            can collaborate, share, and just talk about your day without
-            clogging up a group chat.
-          </InformationContent>
-        </InformationText>
+        <FadeOnScroll>
+          <img src={InformationFirstMain} alt={""} />
+          <InformationText>
+            <InformationTitle>
+              Create an invite-only place where you belong
+            </InformationTitle>
+            <InformationContent>
+              Discord servers are organized into topic-based channels where you
+              can collaborate, share, and just talk about your day without
+              clogging up a group chat.
+            </InformationContent>
+          </InformationText>
+        </FadeOnScroll>
       </InformationFirst>
       <HomeInformationSecond>
         <HomeInformationSecondText>
