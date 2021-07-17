@@ -95,11 +95,15 @@ export const BackHomeImage = styled.img`
 `;
 
 export const InformationFirst = styled.section`
-  display: flex;
   background: ${theme.colors.white};
   min-height: 95vh;
   align-items: center;
   padding: 20px 50px;
+`;
+
+export const InformationFirstMain = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const InformationText = styled.div`

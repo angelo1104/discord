@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import useOnScreen from "../../../hooks/useOnScreen";
+import React, { useEffect } from "react";
+import { motion as Motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 interface Props {
@@ -18,7 +17,7 @@ function FadeOnScroll({ children }: Props) {
   }, [controls, inView]);
 
   return (
-    <motion.div
+    <Motion.div
       ref={ref}
       animate={controls}
       initial="hidden"
@@ -29,7 +28,7 @@ function FadeOnScroll({ children }: Props) {
       }}
     >
       {children}
-    </motion.div>
+    </Motion.div>
   );
 }
 

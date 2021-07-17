@@ -9,6 +9,7 @@ import {
   HomeTitle,
   HomePrimaryBg,
   ImageContainer,
+  InformationFirstMain,
   ForeHomeImage,
   BackHomeImage,
   HomePrimaryText,
@@ -29,7 +30,7 @@ import getOS from "../../Utils/getOS";
 import Background from "../../Assets/Images/BackgroundHome.svg";
 import ForeHome from "../../Assets/Images/ForeHome.svg";
 import BackHome from "../../Assets/Images/BackHome.svg";
-import InformationFirstMain from "../../Assets/Images/HomeInformationFirst.svg";
+import InformationFirstImage from "../../Assets/Images/HomeInformationFirst.svg";
 import InformationSecondMain from "../../Assets/Images/HomeInformationSecond.svg";
 import InformationThirdMain from "../../Assets/Images/HomeInformationThird.svg";
 import ReliableTechMain from "../../Assets/Images/HomeREliableTech.svg";
@@ -70,17 +71,19 @@ function Home() {
       </HomePrimary>
       <InformationFirst>
         <FadeOnScroll>
-          <img src={InformationFirstMain} alt={""} />
-          <InformationText>
-            <InformationTitle>
-              Create an invite-only place where you belong
-            </InformationTitle>
-            <InformationContent>
-              Discord servers are organized into topic-based channels where you
-              can collaborate, share, and just talk about your day without
-              clogging up a group chat.
-            </InformationContent>
-          </InformationText>
+          <InformationFirstMain>
+            <img src={InformationFirstImage} alt={""} />
+            <InformationText>
+              <InformationTitle>
+                Create an invite-only place where you belong
+              </InformationTitle>
+              <InformationContent>
+                Discord servers are organized into topic-based channels where
+                you can collaborate, share, and just talk about your day without
+                clogging up a group chat.
+              </InformationContent>
+            </InformationText>
+          </InformationFirstMain>
         </FadeOnScroll>
       </InformationFirst>
       <HomeInformationSecond>
