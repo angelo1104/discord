@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import {
   HomePrimaryContent,
@@ -38,8 +38,11 @@ import ReliableTechImage from "../../Assets/Images/HomeREliableTech.svg";
 import Stars from "../../Assets/Images/stars.svg";
 import Footer from "../Utils/Footer/Footer";
 import FadeOnScroll from "../Utils/FadeOnScroll/FadeOnScroll";
+import Username from "./Username";
 
 function Home() {
+  const [showUsername, setShowUsername] = useState<boolean>(false);
+
   return (
     <HomeContainer>
       <HomePrimary>
@@ -53,15 +56,23 @@ function Home() {
               can spend time together. A place that makes it easy to talk every
               day and hang out more often.
             </HomePrimaryAbout>
-            <HomePrimaryButtons>
-              <Button large>
-                <GetAppOutlined />
-                <span className={"text"}>Download for {getOS()}</span>
-              </Button>
-              <Button large buttonType={"dark"}>
-                Open discord in your browser
-              </Button>
-            </HomePrimaryButtons>
+            {showUsername ? (
+              <Username />
+            ) : (
+              <HomePrimaryButtons>
+                <Button large>
+                  <GetAppOutlined />
+                  <span className={"text"}>Download for {getOS()}</span>
+                </Button>
+                <Button
+                  large
+                  buttonType={"dark"}
+                  onClick={() => setShowUsername(true)}
+                >
+                  Open discord in your browser
+                </Button>
+              </HomePrimaryButtons>
+            )}
           </HomePrimaryText>
         </HomePrimaryContent>
         <ImageContainer>

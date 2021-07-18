@@ -43,12 +43,16 @@ interface Props {
   children: any;
   buttonType?: ButtonType;
   large?: boolean;
+  styles?: React.CSSProperties;
+  onClick?: () => void;
 }
 
 export default function Button({
   children,
   large = false,
   buttonType = "light",
+  styles,
+  onClick,
 }: Props): JSX.Element {
   const colorTheme = {
     dark: {
@@ -72,7 +76,12 @@ export default function Button({
   };
 
   return (
-    <StyledButton large={large} colorTheme={colorTheme[buttonType]}>
+    <StyledButton
+      large={large}
+      colorTheme={colorTheme[buttonType]}
+      style={styles}
+      onClick={onClick}
+    >
       {children}
     </StyledButton>
   );
