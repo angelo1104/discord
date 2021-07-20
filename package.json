@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^0.3.6",
+    "hcaptcha": "^0.1.0"
   }
 }

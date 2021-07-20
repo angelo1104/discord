@@ -2,7 +2,7 @@ import styled from "styled-components";
 import theme from "../../theme";
 import { motion } from "framer-motion";
 
-export const Wrapper = styled(motion.div)`
+export const Wrapper = styled(motion.form)`
   padding: 13px 28px;
   margin-top: 10px;
   background: ${theme.colors.white};

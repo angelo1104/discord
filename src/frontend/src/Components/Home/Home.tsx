@@ -39,6 +39,7 @@ import Stars from "../../Assets/Images/stars.svg";
 import Footer from "../Utils/Footer/Footer";
 import FadeOnScroll from "../Utils/FadeOnScroll/FadeOnScroll";
 import Username from "./Username";
+import Loader from "../Utils/Loader/Loader";
 
 function Home() {
   const [showUsername, setShowUsername] = useState<boolean>(false);
@@ -50,6 +51,7 @@ function Home() {
         <HomePrimaryContent>
           <HomePrimaryText>
             <HomeTitle>Imagine a place...</HomeTitle>
+            <Loader dimensions={5} color={"red"} />
             <HomePrimaryAbout>
               ...where you can belong to a school club, a gaming group, or a
               worldwide art community. Where just you and a handful of friends

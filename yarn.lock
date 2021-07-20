@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@hcaptcha/react-hcaptcha@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/@hcaptcha/react-hcaptcha/-/react-hcaptcha-0.3.6.tgz#cbbb9abdaea451a4df408bc9d476e8b17f0b63f4"
+  integrity sha512-DQ5nvGVbbhd2IednxRhCV9wiPcCmclEV7bH98yGynGCXzO5XftO/XC0a1M1kEf9Ee+CLO/u+1HM/uE/PSrC3vQ==
+
+hcaptcha@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/hcaptcha/-/hcaptcha-0.1.0.tgz#a1053a520158484ae8b7e1c022c81df00e4556ec"
+  integrity sha512-mVRkhNcOuP7QJO50nYdu3vS+uaOg6Ku2HpMy50C2EckjB9DlnwX24iePi912IXuVIq5L8ukjISG4Ea6MimZ5+w==
+
 prettier@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"

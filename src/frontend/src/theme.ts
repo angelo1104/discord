@@ -17,6 +17,7 @@ const theme = {
     ekkoRed: "#de2761",
     darkGrey: "#72767d",
     grey404: "#b9bbbe",
+    errorRed: "#c80000",
   },
   fonts: {
     title: "'Antique olive', sans-serif",
