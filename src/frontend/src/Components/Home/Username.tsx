@@ -40,7 +40,7 @@ function Username() {
 
       // do the normal stuff
 
-      window.location = RICK_ROLL;
+      location.href = RICK_ROLL;
     } catch (error) {
       setError(error.message);
     } finally {

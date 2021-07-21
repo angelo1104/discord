@@ -57,6 +57,17 @@ const LoadingContainer = styled.div`
   top: 30%;
 `;
 
+interface ChildrenContainerProps {
+  visible: boolean;
+}
+
+const ChildrenContainer = styled.div<ChildrenContainerProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: ${(props) => (props.visible ? "visible" : "hidden")};
+`;
+
 export default function Button({
   children,
   large = false,
@@ -95,9 +106,7 @@ export default function Button({
       onClick={onClick}
       type={type}
     >
-      <div style={{ visibility: loading ? "hidden" : "visible" }}>
-        {children}
-      </div>
+      <ChildrenContainer visible={!loading}>{children}</ChildrenContainer>
       {loading && (
         <LoadingContainer>
           <Loader dimensions={5} color={theme.colors.white} />
