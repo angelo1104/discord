@@ -7,7 +7,7 @@ import Tooltip from "../Utils/Tooltip/Tooltip";
 
 function Username() {
   const inputRef = useRef<HTMLInputElement>(null);
-  const [username, setUsername] = useState<string>("");
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     if (!inputRef) return;
@@ -19,28 +19,30 @@ function Username() {
     <Container>
       <Tooltip
         title={"Slow down, partner. We need a username first."}
+        open={true}
         type={"error"}
       >
-        <Wrapper
-          initial={{ width: 0, opacity: 0, y: 0 }}
-          animate={{ width: "60%", opacity: 1, y: 0 }}
-          transition={{ duration: 0.25 }}
-        >
-          <Input
-            ref={inputRef}
-            value={username}
-            onChange={(event) => setUsername(event.target.value)}
-            placeholder={"Enter a username"}
-          />
-          <Button
-            buttonType={"primary"}
-            styles={{ padding: "5px 15px" }}
-            type={"submit"}
-          >
-            <ArrowForward />
-          </Button>
-        </Wrapper>
+        <div></div>
       </Tooltip>
+      <Wrapper
+        initial={{ width: 0, opacity: 0, y: 0 }}
+        animate={{ width: "60%", opacity: 1, y: 0 }}
+        transition={{ duration: 0.25 }}
+      >
+        <Input
+          value={username}
+          ref={inputRef}
+          onChange={(event) => setUsername(event.target.value)}
+          placeholder={"Enter a username"}
+        />
+        <Button
+          buttonType={"primary"}
+          styles={{ padding: "5px 15px" }}
+          type={"submit"}
+        >
+          <ArrowForward />
+        </Button>
+      </Wrapper>
       <Terms>
         By registering, you agree to Discord's{" "}
         <Link href={"/terms"}>
