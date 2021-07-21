@@ -21,8 +21,9 @@ function Username() {
         title={"Slow down, partner. We need a username first."}
         open={true}
         type={"error"}
+        disableAnimation
       >
-        <div></div>
+        <div style={{ marginBottom: -10 }} />
       </Tooltip>
       <Wrapper
         initial={{ width: 0, opacity: 0, y: 0 }}

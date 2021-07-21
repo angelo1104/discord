@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import theme from "../../../theme";
 import React from "react";
+import Loader from "../Loader/Loader";
 
 interface ButtonProps {
   colorTheme: {
@@ -18,6 +19,7 @@ const StyledButton = styled.button<ButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   outline-width: 0;
   padding: ${(props) => (props.large ? "15px 25px" : "10px 14px")};
   background: ${(props) => props.colorTheme.background};
@@ -46,7 +48,14 @@ interface Props {
   styles?: React.CSSProperties;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  loading?: boolean;
 }
+
+const LoadingContainer = styled.div`
+  position: absolute;
+  left: 36%;
+  top: 30%;
+`;
 
 export default function Button({
   children,
@@ -55,6 +64,7 @@ export default function Button({
   styles,
   type,
   onClick,
+  loading = false,
 }: Props): JSX.Element {
   const colorTheme = {
     dark: {
@@ -85,7 +95,14 @@ export default function Button({
       onClick={onClick}
       type={type}
     >
-      {children}
+      <div style={{ visibility: loading ? "hidden" : "visible" }}>
+        {children}
+      </div>
+      {loading && (
+        <LoadingContainer>
+          <Loader dimensions={5} color={theme.colors.white} />
+        </LoadingContainer>
+      )}
     </StyledButton>
   );
 }

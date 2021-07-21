@@ -1,12 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import {
-  makeStyles,
-  Tooltip as MaterialTooltip,
-  withStyles,
-} from "@material-ui/core";
+import { Tooltip as MaterialTooltip, withStyles } from "@material-ui/core";
 import theme from "../../../theme";
-import { motion } from "framer-motion";
 
 interface Props {
   children: any;
@@ -16,6 +10,7 @@ interface Props {
   open?: boolean;
   onOpen?: () => void;
   onClose?: () => void;
+  disableAnimation?: boolean;
   placement?:
     | "bottom-end"
     | "bottom-start"
@@ -37,10 +32,7 @@ interface Theme {
   shadow?: string;
 }
 
-interface ColorTheme {
-  light: Theme;
-  dark: Theme;
-}
+const FakeTransitionComponent = ({ children }: any) => children;
 
 function Tooltip({
   children,
@@ -51,6 +43,7 @@ function Tooltip({
   onOpen,
   onClose,
   placement = "top",
+  disableAnimation = false,
 }: Props): JSX.Element {
   const colorTheme = {
     primary: {
@@ -105,6 +98,9 @@ function Tooltip({
         onOpen={onOpen}
         onClose={onClose}
         placement={placement}
+        TransitionComponent={
+          disableAnimation ? FakeTransitionComponent : undefined
+        }
       >
         {children}
       </StyledTooltip>
