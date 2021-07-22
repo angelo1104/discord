@@ -40,3 +40,9 @@ export const Terms = styled.p`
     text-decoration: underline;
   }
 `;
+
+export const CaptchaWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

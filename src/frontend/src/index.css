@@ -5,6 +5,10 @@
   src: url("../src/Assets/Fonts/Antique olive nord.otf");
 }
 
+html {
+  height: auto;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
