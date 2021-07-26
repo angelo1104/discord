@@ -1,10 +1,14 @@
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { PreFlightModel } from './models/preFlight.model';
 import { PreFlightService } from './preFlight.service';
+import { ConfigService } from '@nestjs/config';
 
 @Resolver((of) => PreFlightModel)
 export class PreFlightResolver {
-  constructor(private readonly preflightService: PreFlightService) {}
+  constructor(
+    private readonly preflightService: PreFlightService,
+    private configService: ConfigService,
+  ) {}
 
   @Query((returns) => PreFlightModel)
   async preflightUsername(
@@ -12,7 +16,9 @@ export class PreFlightResolver {
     @Args('username', { type: () => String }) username: string,
   ) {
     try {
-      const { valid } = await this.preflightService.verifyToken(token);
+      const secret = this.configService.get<string>('captchaSecret');
+
+      const { valid } = await this.preflightService.verifyToken(token, secret);
 
       return {
         validCaptcha: valid,
