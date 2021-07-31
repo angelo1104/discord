@@ -7,6 +7,14 @@ type PreFlightModel {
   validUsername: Boolean!
 }
 
+type HelloModel {
+  message: String!
+}
+
 type Query {
+  hello: HelloModel!
+}
+
+type Mutation {
   preflightUsername(username: String!, token: String!): PreFlightModel!
 }

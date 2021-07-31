@@ -13,6 +13,8 @@ import Tooltip from "../Utils/Tooltip/Tooltip";
 import sleep from "../../Utils/sleep";
 import RICK_ROLL from "../../Utils/rick-roll";
 import HCaptcha from "@hcaptcha/react-hcaptcha";
+import { useMutation } from "@apollo/client";
+import PRE_FLIGHT_QUERY from "../../graphql-queries/preflight";
 
 function Username() {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -20,6 +22,9 @@ function Username() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
   const [showCaptcha, setShowCaptcha] = useState<boolean>(false);
+
+  const [preflight, { data, error: captchaError }] =
+    useMutation(PRE_FLIGHT_QUERY);
 
   useEffect(() => {
     if (!inputRef) return;
@@ -34,8 +39,12 @@ function Username() {
       return "Must be between 2 and 32 in length.";
   }, [username]);
 
+  useEffect(() => {
+    console.log("dat", data, captchaError);
+  }, [data, captchaError]);
+
   const register = async () => {
-    // location.href = RICK_ROLL;
+    location.href = RICK_ROLL;
   };
 
   const submitForm = async (event: any) => {
@@ -61,7 +70,7 @@ function Username() {
   const onVerify = (token: string) => {
     console.log("token", token);
 
-    register();
+    preflight({ variables: { username, token } });
   };
 
   return (
